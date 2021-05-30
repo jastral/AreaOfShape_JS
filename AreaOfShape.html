@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <title>Area of a Given shape</title>
+</head>
+<body>
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div class="myclass">  
+                    <h2>Select the Shape of which you to find the area.</h2>
+
+                    <form>
+                        <input type="radio" name="shape" value="triangle" id="triangle" onclick="showTriangle()">
+                        <label for="triangle">Triangle</label>
+
+                        <input type="radio" name="shape" value="rectangle" id="rectangle" onclick="showRectangle()">
+                        <label for="rectangle">Rectangle</label>
+
+                        <input type="radio" name="shape" value="circle" id="circle" onclick="showCircle()">
+                        <label for="rectangle">Circle</label>
+                        <br>
+                    </form>
+                    <label style="display: none;" id="txt">please provide the following</label>
+                </div>
+
+                <br>
+                <div id="myTriangle" style="display: none;"> 
+                    Side 1 : <input type="number" name="side1" id="side1">
+                    Side 2 : <input type="number" name="side2" id="side2">
+                    Side 3 : <input type="number" name="side3" id="side3">
+
+                    <button class="btn btn-primary" onclick="aot()">Evaluate</button>
+                </div>
+
+                <div id="myRectangle" style="display: none;">
+                    Length : <input type="number" name="length" id="length">
+                    Breadth : <input type="number" name="breadth" id="breadth">
+
+                    <button class="btn btn-primary" onclick="aor()">Evaluate</button>
+                </div>
+
+                <div id="myCircle" style="display: none;">
+                    Radius : <input type="number" name="radius" id="radius">
+
+                    <button class="btn btn-primary" onclick="aoc()">Evaluate</button>
+                </div>
+
+                <br>
+
+                <div id="showArea" style="display: none;">
+                    <label for="statement" id="shape"></label>
+                    <label for="area" id="area"> : </label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="AreaOfShape.js"></script>
+</body>
+</html>
