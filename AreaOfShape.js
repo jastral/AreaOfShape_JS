@@ -38,7 +38,7 @@ function aor(){
 
 //AREA OF CIRCLE
 function aoc(){
-    let radius = document.getElementById("length").value;
+    let radius = document.getElementById("radius").value;
 
     let circleObj = new Circle("Circle");
     circleObj.area(radius);
@@ -56,6 +56,10 @@ function aoc(){
 
 //DISPLAYING TRIANGLE ATTRIBUTES
 function showTriangle(){
+    
+    document.getElementById("side1").value = "";
+    document.getElementById("side2").value = "";
+    document.getElementById("side3").value = "";
 
     const text = document.getElementById("txt"); 
 
@@ -70,11 +74,17 @@ function showTriangle(){
     const myCircle = document.getElementById("myCircle"); 
     myCircle.style.display = 'none';
 
+    let showArea = document.getElementById("showArea");  
+    showArea.style.display = 'none';
+
 }
 
 
 //DISPLAYING RECTANGLE ATTRIBUTES
 function showRectangle(){
+
+    document.getElementById("length").value = "";
+    document.getElementById("breadth").value = "";
 
     const text = document.getElementById("txt"); 
     text.style.display = 'inline';
@@ -88,11 +98,16 @@ function showRectangle(){
     const myCircle = document.getElementById("myCircle"); 
     myCircle.style.display = 'none';
 
+    let showArea = document.getElementById("showArea");  
+    showArea.style.display = 'none';
+
 }
 
 
 //DISPLAYING CIRCLE ATTRIBUTES
 function showCircle(){
+
+    document.getElementById("radius").value = "";
 
     const text = document.getElementById("txt"); 
 
@@ -107,6 +122,9 @@ function showCircle(){
 
     const myRectangle = document.getElementById("myRectangle"); 
     myRectangle.style.display = 'none';
+
+    let showArea = document.getElementById("showArea");  
+    showArea.style.display = 'none';
 }
 
 
@@ -156,6 +174,6 @@ class Circle extends Shape{
     }
 
     area(radius){
-        return (22 * radius * radius) / 7;
+        return 3.14 * radius * radius;
     }
 }
